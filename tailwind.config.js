@@ -1,7 +1,11 @@
 module.exports = {
   purge: ["src/**/*.ts", "src/**/*.tsx", "public/**/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      inset: {
+        "1/2": "50%",
+      },
+    },
   },
   variants: {},
   plugins: [],
