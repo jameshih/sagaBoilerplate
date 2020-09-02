@@ -1,2 +1,3 @@
 # sagaBoilerplate
-redux + redux sage + react router dom + tailwind
+
+redux + redux saga + react router dom + tailwind
