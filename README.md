@@ -1,3 +1,7 @@
 # sagaBoilerplate
 
-redux + redux saga + react router dom + tailwind
+- redux
+- redux-saga
+- hookrouter
+- styled-components
+- tailwind

@@ -1,11 +1,34 @@
-import React from "react";
+import React, { FC, Suspense, lazy } from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { useRoutes } from "hookrouter";
+import { Provider } from "react-redux";
+
 import * as serviceWorker from "./serviceWorker";
+
+import store from "./store";
+import "./styles/build/index.css";
+import { LoadingSpinner } from "./components/core/LoadingSpiner";
+import { NotFound } from "./components/pages/NotFound";
+const Home = lazy(() => import("./components/pages/Home"));
+
+const routes = {
+  "/": () => <Home />
+};
+
+const Root: FC<{}> = () => {
+  const routeResult = useRoutes(routes);
+  return (
+    <Provider store={store}>
+      <Suspense fallback={<LoadingSpinner />}>
+        {routeResult || <NotFound />}
+      </Suspense>
+    </Provider>
+  );
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Root />
   </React.StrictMode>,
   document.getElementById("root")
 );
