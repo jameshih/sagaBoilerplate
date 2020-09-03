@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import tw from 'tailwind.macro'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import React, { FC } from 'react';
+import styled from 'styled-components';
+import tw from 'tailwind.macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
 const Overlay = styled.div.attrs({
     className:
@@ -13,10 +13,10 @@ const Overlay = styled.div.attrs({
             ${tw`block w-0 h-0 -mt-12 text-gray-600 opacity-75 `}
         }
     }
-`
+`;
 
 export const LoadingSpinner: FC<{}> = () => (
     <Overlay>
         <FontAwesomeIcon icon={faCircleNotch} size='2x' spin />
     </Overlay>
-)
+);

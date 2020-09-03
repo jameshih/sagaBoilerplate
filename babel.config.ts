@@ -1,5 +1,1 @@
-export const plugins = [
-  "react-hot-loader/babel",
-  "syntax-object-rest-spread",
-  "macros"
-];
+export const plugins = ['react-hot-loader/babel', 'syntax-object-rest-spread', 'macros'];

@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 
-const Home: FC<{}> = () => <div>Home</div>
+const Home: FC<{}> = () => <div>Home</div>;
 
-export default Home
+export default Home;
