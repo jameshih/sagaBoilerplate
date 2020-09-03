@@ -4,7 +4,7 @@ import Container from '../core/Container';
 const Layout: FC<{}> = ({ children }) => {
     return (
         <Container className={'h-screen'}>
-            <div>{children}</div>
+            <>{children}</>
         </Container>
     );
 };

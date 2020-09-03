@@ -15,8 +15,10 @@ const Overlay = styled.div.attrs({
     }
 `;
 
-export const LoadingSpinner: FC<{}> = () => (
+const LoadingSpinner: FC<{}> = () => (
     <Overlay>
         <FontAwesomeIcon icon={faCircleNotch} size='2x' spin />
     </Overlay>
 );
+
+export default LoadingSpinner;

@@ -7,9 +7,9 @@ import * as serviceWorker from './serviceWorker';
 
 import store from './store';
 import './styles/build/index.css';
-import { LoadingSpinner } from './components/core/LoadingSpiner';
-import { NotFound } from './components/pages/NotFound';
-import { Layout } from './components/layout/Layout';
+import LoadingSpinner from './components/core/LoadingSpinner';
+import { Header, Footer, Layout } from './components/layout';
+import NotFound from './components/pages/NotFound';
 const Home = lazy(() => import('./components/pages/Home'));
 
 const routes = {
@@ -21,7 +21,9 @@ const Root: FC<{}> = () => {
     return (
         <Provider store={store}>
             <Suspense fallback={<LoadingSpinner />}>
+                <Header />
                 <Layout>{routeResult || <NotFound />}</Layout>
+                <Footer />
             </Suspense>
         </Provider>
     );
