@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Container } from '../core';
 import { A } from 'hookrouter';
 
-const Header: FC<{}> = () => {
+export default function Header() {
     return (
         <Container className={'h-20 fixed top-0 bg-gray-800 text-white'}>
             <A className='mx-2' href='/'>
@@ -13,6 +13,4 @@ const Header: FC<{}> = () => {
             </A>
         </Container>
     );
-};
-
-export default Header;
+}

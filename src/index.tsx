@@ -1,4 +1,4 @@
-import React, { FC, Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
 import { useRoutes } from 'hookrouter';
 import { Provider } from 'react-redux';
@@ -18,7 +18,7 @@ const routes = {
     '/profile': () => <Profile />,
 };
 
-const Root: FC<{}> = () => {
+function Root() {
     const routeResult = useRoutes(routes);
     return (
         <Provider store={store}>
@@ -29,7 +29,7 @@ const Root: FC<{}> = () => {
             <Footer />
         </Provider>
     );
-};
+}
 
 ReactDOM.render(<Root />, document.getElementById('root'));
 

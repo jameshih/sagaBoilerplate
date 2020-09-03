@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-const NotFound: FC<{}> = () => <div>404</div>;
-
-export default NotFound;
+export default function NotFound() {
+    return <div>404</div>;
+}

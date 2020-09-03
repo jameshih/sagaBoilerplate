@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,10 +15,10 @@ const Overlay = styled.div.attrs({
     }
 `;
 
-const LoadingSpinner: FC<{}> = () => (
-    <Overlay>
-        <FontAwesomeIcon icon={faCircleNotch} size='2x' spin />
-    </Overlay>
-);
-
-export default LoadingSpinner;
+export default function LoadingSpinner() {
+    return (
+        <Overlay>
+            <FontAwesomeIcon icon={faCircleNotch} size='2x' spin />
+        </Overlay>
+    );
+}

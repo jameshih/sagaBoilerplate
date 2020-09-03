@@ -1,8 +1,6 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Container } from '../core';
 
-const Footer: FC<{}> = () => {
+export default function Footer() {
     return <Container className={'fixed bottom-0'}>footer</Container>;
-};
-
-export default Footer;
+}

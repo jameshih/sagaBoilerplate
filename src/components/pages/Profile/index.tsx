@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
+import React from 'react';
 
-const Profile: FC<{}> = () => <div>Profile</div>;
-
-export default Profile;
+export default function Profile() {
+    return <div>Profile</div>;
+}
