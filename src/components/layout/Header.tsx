@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Container from '../core/Container';
+import { Container } from '../core';
 import { A } from 'hookrouter';
 
 const Header: FC<{}> = () => {

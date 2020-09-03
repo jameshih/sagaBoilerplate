@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Container from '../core/Container';
+import { Container } from '../core';
 
 const Layout: FC<{}> = ({ children }) => {
     return (
