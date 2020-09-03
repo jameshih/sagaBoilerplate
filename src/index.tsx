@@ -20,11 +20,11 @@ const Root: FC<{}> = () => {
     const routeResult = useRoutes(routes);
     return (
         <Provider store={store}>
+            <Header />
             <Suspense fallback={<LoadingSpinner />}>
-                <Header />
                 <Layout>{routeResult || <NotFound />}</Layout>
-                <Footer />
             </Suspense>
+            <Footer />
         </Provider>
     );
 };
