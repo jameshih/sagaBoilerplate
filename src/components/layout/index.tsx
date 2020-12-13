@@ -1,5 +1,5 @@
 import Header from './Header';
-import Footer from './Footer';
 import Layout from './Layout';
+import Nav from './Nav';
 
-export { Header, Footer, Layout };
+export { Header, Layout, Nav };

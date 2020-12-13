@@ -1,7 +1,7 @@
 import { all } from 'redux-saga/effects';
-import { userSaga } from './user/userSaga';
+import { wsSaga } from './ws/wsSaga';
+import { apiSaga } from './api/apiSaga';
 
 export default function* rootSaga() {
-    console.log('rootSaga');
-    yield all([userSaga()]);
+    yield all([wsSaga(), apiSaga()]);
 }

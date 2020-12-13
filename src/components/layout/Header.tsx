@@ -1,16 +1,28 @@
 import React from 'react';
-import { Container } from '../core';
 import { A } from 'hookrouter';
 
-export default function Header() {
+export default function Header({ path }: { path: string }) {
     return (
-        <Container className={'h-20 fixed top-0 bg-gray-800 text-white'}>
-            <A className='mx-2' href='/'>
-                Home
-            </A>
-            <A className='mx-2' href='/profile'>
-                Profile
-            </A>
-        </Container>
+        <div
+            className={`absolute top-0 z-10 flex justify-between w-full px-8 pt-4 text-xl font-medium bg-black opacity-90 ${
+                path === '/report' ? 'pb-0' : 'pb-0'
+            }`}
+        >
+            {path === '/' || path === '/blocks' ? (
+                <>
+                    <A href='/' className={path === '/' ? 'text-app_ivory' : 'text-app_gray'}>
+                        Live Profit
+                    </A>
+                    <A
+                        href='/blocks'
+                        className={path === '/blocks' ? 'text-app_ivory' : 'text-app_gray'}
+                    >
+                        Recent Blocks
+                    </A>
+                </>
+            ) : (
+                <h1>{path.substring(1).charAt(0).toUpperCase() + path.slice(2)}</h1>
+            )}
+        </div>
     );
 }
