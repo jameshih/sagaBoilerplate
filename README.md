@@ -2,18 +2,17 @@
 
 ### Including
 
--   redux
--   redux-saga
--   react-redux
--   react-router-dom (using HashRouter)
--   styled-components
--   tailwind
--   axios
+- next.js
+- redux
+- redux-saga
+- react-redux
+- styled-components
+- tailwind
 
 ### Instructions
 
 ```
 $ yarn install
-$ yarn start
+$ yarn dev
 
 ```

@@ -1,11 +1,15 @@
+// postcss.config.js
 module.exports = {
-    plugins: [
-        require('tailwindcss')('./src/styles/tailwind.config.js'),
-        require('autoprefixer'),
-        process.env.NODE_ENV === 'production' &&
-            require('@fullhuman/postcss-purgecss')({
-                content: ['./src/**/*.tsx', './public/index.html'],
-                defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
-            }),
-    ],
-};
+  plugins: {
+    'postcss-import': {},
+    tailwindcss: {},
+    'postcss-preset-env': {
+      nesting: {},
+      autoprefixer: {},
+      stage: 1,
+      features: {
+        'custom-properties': true,
+      },
+    },
+  },
+}
