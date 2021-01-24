@@ -6,6 +6,7 @@
 - redux
 - redux-saga
 - react-redux
+- redux-localstorage-simple
 - styled-components
 - tailwind
 
