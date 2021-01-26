@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { AppDispatch, AppState } from '../index'
+import { AppDispatch, AppState } from '@/types/index'
 import { updateUsername } from './actions'
-import { useLocalStorage } from '@/hooks/utils/useLocalStorage'
+import { useLocalStorage } from '@/hooks/index'
 import { LocalStorageKeys, DEFAULT_USERNAME } from '@/constants/index'
 
 export const useUsername = (): string => {

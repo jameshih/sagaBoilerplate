@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { useLocalStorage } from '@/hooks/utils/useLocalStorage'
-import { useInput } from '@/hooks/utils/useInputs'
+import { useLocalStorage, useInput } from '@/hooks/index'
 import { useUpdateUsername, useUsername } from '@/state/user/hooks'
 import { LocalStorageKeys, DEFAULT_USERNAME } from '@/constants/index'
 
@@ -24,6 +23,7 @@ const Home: React.FC = () => {
 
   const handleSubmit = (evt: React.FormEvent) => {
     evt.preventDefault()
+    if (!value.length) return
     handleUsername(value)
     reset()
   }
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input type="text" {...bind} />
+          <input required type="text" {...bind} />
         </label>
         <input type="submit" value="Submit" />
       </form>
